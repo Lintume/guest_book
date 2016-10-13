@@ -26,10 +26,13 @@ Please check the system requirements before installing project
 2. Enter your database details into `app/config/database.php`.
 3. Run the command
 `composer install`
-4. For creating tables in data base run the command
+4. Add NOCAPTCHA_SECRET and NOCAPTCHA_SITEKEY in .env file:
+   NOCAPTCHA_SECRET=[secret-key]
+   NOCAPTCHA_SITEKEY=[site-key]
+5. For creating tables in data base run the command
 `php artisan migrate`
-5. Finally, setup an [Apache VirtualHost](http://httpd.apache.org/docs/current/vhosts/examples.html) to point to the "public" folder.
-  * For development, you can simply run `php artisan serve`
+6. Finally, setup an [Apache VirtualHost](http://httpd.apache.org/docs/current/vhosts/examples.html) to point to the "public" folder.
+  * For development, you can simply run `php artisan serve` and run the command `php artisan key:generate`
 
 
 
